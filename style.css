@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    border-color: black;
+    border-width: 5px;
+    border-style:solid;
+}
+
+#container{
+    display:grid;
+    height: auto;
+    width: 100%;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items:stretch;
+    grid-template-areas:
+    "lGray1 lGray1 sideWhite sideWhite sideWhite sideYellow sideYellow shortWhite1 shortWhite2 squareYellow squareYellow"
+    "bigRed bigRed bigRed bigRed tallWhite shortWhite3 shortWhite4 shortWhite1 shortWhite2 squareYellow squareYellow"
+    "bigRed bigRed bigRed bigRed tallWhite shortWhite3 shortWhite4 shortWhite1 squareBlack1 squareBlack1 tallYellow"
+    "bigRed bigRed bigRed bigRed tallWhite gray1 gray1 shortWhite1 squareBlack1 squareBlack1 tallYellow"
+    "bigRed bigRed bigRed bigRed sideWhite2 sideWhite2 tallRed shortWhite1 gray2 gray2 tallYellow"
+    "squareBlue squareBlue squareGray squareGray squareBlack2 squareBlack2 tallRed shortWhite1 sideBlack sideBlack sideBlack"
+    "squareBlue squareBlue squareGray squareGray squareBlack2 squareBlack2 tallRed sideGray sideGray sideGray sideGray";
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.div1{
+    grid-area: lGray1;
+}
+
+.div2{
+    grid-area: sideWhite;
+}
+
+.div3{
+    grid-area: sideYellow;
+}
+
+.div4{
+    grid-area: shortWhite1;
+}
+
+.div5{
+    grid-area: shortWhite2;
+}
+
+.div6{
+    grid-area: bigRed;
+}
+
+.div7{
+    grid-area: squareYellow;
+}
+
+.div8{
+    grid-area: tallWhite;
+}
+
+.div9{
+    grid-area: shortWhite3;
+}
+
+.div10{
+    grid-area: shortWhite4;
+}
+
+.div11{
+    grid-area: squareBlack1;
+}
+
+.div12{
+    grid-area: gray1;
+}
+
+.div13{
+    grid-area: sideWhite2;
+}
+
+.div14{
+    grid-area: tallYellow;
+}
+
+.div15{
+    grid-area: gray2;
+}
+
+.div16{
+    grid-area: squareBlue;
+}
+
+.div17{
+    grid-area: tallRed;
+}
+
+.div18{
+    grid-area: squareGray;
+}
+
+.div19{
+    grid-area: sideBlack;
+}
+
+.div20{
+    grid-area: sideGray;
+}
+
+.div21{
+    grid-area: squareBlack2;
+}
+
+.div22{
+    grid-area: squareBlack3;
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 601px){
+    #container{
+        /* display:grid;
+        width: 100%; */
+        /* grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+         */
+         grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* align-items:stretch; */
+        grid-template-areas:
+        "lGray1 lGray1 sideWhite sideWhite sideWhite sideYellow sideYellow shortWhite1"
+        "shortWhite2 bigRed bigRed bigRed bigRed squareYellow squareYellow shortWhite1"
+        "shortWhite2 bigRed bigRed bigRed bigRed squareYellow squareYellow shortWhite1"
+        "tallWhite bigRed bigRed bigRed bigRed shortWhite3 shortWhite4 shortWhite1"
+        "tallWhite bigRed bigRed bigRed bigRed shortWhite3 shortWhite4 shortWhite1"
+        "tallWhite squareBlack1 squareBlack1 gray1 gray1 sideWhite2 sideWhite2 shortWhite1"
+        "tallYellow squareBlack1 squareBlack1 gray2 gray2 squareBlue squareBlue tallRed"
+        "tallYellow squareGray squareGray sideBlack sideBlack squareBlue squareBlue tallRed"
+        "tallYellow squareGray squareGray sideGray sideGray sideGray sideGray tallRed";
+    }
+
+    .div21{
+        grid-area:unset;
+        display:none;
+    }
+    .div22{
+        grid-area:unset;
+        display:none;
+    }
+}
+
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+    #container{
+        display:grid;
+        width: 100%;
+        grid-auto-columns: minmax(250px, 480px);
+        grid-auto-rows: 1fr;
+        grid-template-areas:
+        "lGray1 lGray1 sideWhite sideWhite sideWhite"
+        "sideYellow sideYellow shortWhite1 shortWhite2 tallWhite"
+        "squareYellow squareYellow shortWhite1 shortWhite2 tallWhite"
+        "squareYellow squareYellow shortWhite1 shortWhite3 tallWhite"
+        "shortWhite4 squareBlack3 shortWhite1 shortWhite3 squareBlack1"
+        "shortWhite4 squareBlack3 shortWhite1 squareBlack2 squareBlack2"
+        "gray1 gray1 shortWhite1 squareBlack2 squareBlack2"
+        "bigRed bigRed bigRed bigRed tallYellow"
+        "bigRed bigRed bigRed bigRed tallYellow"
+        "bigRed bigRed bigRed bigRed tallYellow"
+        "bigRed bigRed bigRed bigRed tallRed"
+        "squareGray squareGray gray2 gray2 tallRed"
+        "squareGray squareGray gray2 gray2 tallRed"
+        "squareBlue squareBlue squareGray squareGray tallRed"
+        "squareBlue squareBlue squareGray squareGray squareBlack2"
+        "sideBlack sideBlack sideBlack sideBlack sideBlack"
+        "sidegray sidegray sidegray sidegray squareBlack1";
+    }
+}
